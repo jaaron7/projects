@@ -5,8 +5,9 @@ Created on Tue Nov 26 11:24:16 2019
 @author: kraskjo
 """
 
+# Simple program to lookup notes in a major scale 
 
-scale_list = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"]
+#dictionary to convert user input into integers, used for ScaleLookup function below
 notes_to_numbers = {
         "A": 1,
         "Bb": 2,
@@ -22,19 +23,9 @@ notes_to_numbers = {
         "Ab": 12,
         }
 
+#dictionary to convert integers back into scale notes strings 
 numbers_to_notes = {1: "A", 2: "Bb", 3: "B", 4: "C", 5: "Db", 6: "D", 7: "Eb", 8: "E", 9: "F", 10: "Gb", 11: "G", 12: "Ab",}
 
-"""def scale_lookup(root):
-    root = notes_to_numbers[user_key]
-    note2 = numbers_to_notes[root + 2]
-    note3 = root + 4
-    note4 = root + 5
-    note5 = root + 7
-    note6 = root + 9 
-    note7 = root + 11
-"""
-
-#user_root = input("Key?") # ask user for note
 
 def ScaleLookup(user_root):
     
@@ -76,7 +67,7 @@ def ScaleLookup(user_root):
     else:
        note7 = numbers_to_notes[conversion + 11] 
            
-    print("Here are the notes for the key of " + user_root + ": " + user_root + note2 + note3  + note4 + note5 + note6 + note7)
+    print("Here are the notes for the key of " + user_root + " major: " + user_root + note2 + note3  + note4 + note5 + note6 + note7)
 
 ScaleLookup((input("In what key are you playing? ")))
 
